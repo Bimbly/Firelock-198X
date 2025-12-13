@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-29a2-cb33-e21d-80a5" name="Firelock 198X" battleScribeVersion="2.03" revision="10" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false">
+<gameSystem id="sys-29a2-cb33-e21d-80a5" name="Firelock 198X" battleScribeVersion="2.03" revision="11" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false">
   <categoryEntries>
     <categoryEntry name="TACOM" id="c2a0-f677-9d01-266d">
       <constraints>
@@ -95,145 +95,179 @@
   </profileTypes>
   <sharedRules>
     <rule name="Small Arm" id="Small Arm" hidden="false">
-      <description>This is a man-portable weapon that can be fired through ports or hatches in a carrier. It may be fired at stationary Accuracy while embarked in the Fire Phase and in close combat. It may target enemies in any of the firer’s arcs.</description>
+      <description>This is a man-portable weapon. It may be fired at stationary Accuracy while embarked in the Fire Phase and in close combat. It may target enemies in any of the firer’s arcs.</description>
     </rule>
     <rule name="Melee" id="Melee" hidden="false">
       <description>This weapon may target enemies in any arc. It may only be used in close combat and does not get a half range modifier.</description>
     </rule>
     <rule name="Rally" id="Rally" hidden="false">
-      <description>This tool restores friendly units&apos; fighting spirits. Any friendly unit targeted by this weapon immediately loses all of its pin tokens. Rally weapons can be fired even if the firer is at max pin.</description>
+      <description>This tool restores friendly units&apos; fighting spirits. Any friendly unit targeted by this weapon immediately loses all of its pin tokens.
+
+Rally weapons can be fired at max pin.</description>
     </rule>
     <rule name="Radius" id="Radius" hidden="false" noindex="true">
-      <description>This weapon affects all units whose base centers are within an X” radius from its impact point. If it possesses an Accuracy statistic, it rolls independently to hit each unit covered. Radius attacks against unspotted units are considered to be blind-firing, like a normal attack. Radius attacks don&apos;t hit airborne enemies</description>
+      <description>This weapon affects all units whose base centers are within an X” radius from its impact point. If it possesses an Accuracy statistic, it rolls independently to hit each unit covered. Radius attacks against unspotted units are considered to be blind-firing.</description>
     </rule>
     <rule name="Light Indirect" id="Light Indirect" hidden="false">
-      <description>This weapon can conduct indirect fire. 
-It does not get a half range Accuracy modifier. A result of 6 hits counts as having Rear Attack. 
+      <description>This weapon can conduct indirect fire. It does not get a half range Accuracy modifier. A non-blind-fire hit result of 6 hits counts as a Rear Attack. It has a time-to-target equal to X. Time-to-target is not reduced in half range.
 
-Light Indirect weapons do not identify or spot the firer (but remove vehicle ambush) and need friendly LOS for indirect fire. See INDIRECT FIRE, p. 4-4.</description>
+Light Indirect weapons do not identify or spot the firer (but remove vehicle ambush) and need friendly LOS for indirect fire.</description>
     </rule>
     <rule name="Heavy Indirect" id="Heavy Indirect" hidden="false">
-      <description>This weapon can conduct indirect fire. It does not get a half range Accuracy modifier. A result of 6 hits counts as having Rear Attack.
+      <description>This weapon can conduct indirect fire. It does not get a half range Accuracy modifier. A non-blind-fire hit result of 6 hits counts as a Rear Attack. It has a time-to-target equal to X. Time-to-target is not reduced in half range.
 
-Heavy Indirect weapons do identify and spot the firer, cannot fire if concealed, and have a time-in-flight equal to X. They use their accuracy at the time their attack lands, not when it was fired. If the firer is killed, the attack misses. Heavy Indirect weapons need a fire mission to conduct indirect fire. See INDIRECT FIRE, p. 4-4.</description>
+Heavy Indirect weapons identify and spot the firer and cannot fire if concealed. They use their accuracy at the time their attack lands, not when it was fired. If the firer is killed, the attack misses. Heavy Indirect weapons need a fire mission to conduct indirect fire.</description>
     </rule>
     <rule name="Resupply" id="Resupply" hidden="false" noindex="true">
-      <description>This unit can resupply up to X Ammo (for any weapon) to one friendly within 6” as
-a fire action. For every unit of Ammo supplied to another unit, this unit’s Resupply value decreases by one. Resupplying Ammo is equivalent to firing a weapon at stationary Accuracy, i.e. the Resupply unit cannot resupply another unit and then move in the Maneuver Phase. Resupply units cannot resupply themselves. Cannot target airborne units. Does not cause the resupplying unit to identify itself.</description>
+      <description>This unit can reload up to X Ammo (for any number of weapons) to one friendly within 6” during Upkeep without needing LOS. For every unit of Ammo reloaded in another unit’s weapon, this unit’s Resupply value decreases by one. Reloading forces the Resupply vehicle to remain stationary in the Maneuver Phase, but it may still take a fire action in the Fire Phase. Resupply units cannot reload themselves. Cannot target airborne units.</description>
     </rule>
     <rule name="Personnel Carrier" id="Personnel Carrier" hidden="false">
-      <description>This unit is a personnel carrier, capable of carrying up to X infantry units inside itself in addition to external desants. Infantry must disembark from the vehicle from the listed arc. Friendly vehicles do not block disembarkation. Infantry may not use their weapons
-while embarked except for Small Arms, which may be fired at stationary accuracy. A PC that is carrying infantry may use its own weapons as normal. This doesn&apos;t keep the carrier from moving later. Embarked infantry can fight in close combat, but cannot screen their carrier. Aircraft must land to embark or disembark, and may not carry desanting infantry. Embarked units cannot be targeted or hit directly by attacks on the carrier, and do not inherit the carrier’s pin. When a carrier dies, teams are killed and squads are depleted; any infantry in an airborne carrier are killed.</description>
+      <description>This unit is a personnel carrier, capable of carrying up to X infantry units inside itself in addition to external desants. Infantry must disembark from the vehicle from the listed arc. Friendly vehicles do not block disembarkation.
+
+Infantry may not use their weapons while embarked except for Small Arms, which may be fired at stationary accuracy. A PC that is carrying infantry may use its own weapons as normal. This doesn&apos;t keep the carrier from moving later. Embarked infantry can fight in close combat, but cannot screen their carrier.
+
+Aircraft must land to embark or disembark, and may not carry desanting infantry.
+
+Embarked units cannot be targeted or hit directly by attacks on the carrier, and do not inherit the carrier’s pin. When a carrier dies, teams are killed and squads are depleted; any infantry in an airborne carrier are killed.</description>
     </rule>
     <rule name="Turret" id="Turret" hidden="false">
       <description>This weapon may target an enemy in any of its firer’s arcs, not just its front.</description>
     </rule>
     <rule name="Shaped Charge" id="Shaped Charge" hidden="false">
-      <description>This weapon is a powerful explosive penetrator. It does not use its second Strength value as half range Strength. When hitting vehicles at any range, it uses its first Strength value. If this Strength is greater than the target’s Toughness, add a +1 modifier to its kill roll (before Cover Modifier). If a 1+ attack gains a +1 modifier, it becomes ++. When hitting infantry at any range, it uses its second Strength value and gains a level of Ignore Cover based on its first Strength value:
- Strength 1-6  Ignore Cover (1)
- Strength 7+ Ignore Cover (2)</description>
+      <description>This weapon is a powerful explosive penetrator. It does not use its second Strength value as half range Strength.
+
+When hitting vehicles at any range, it uses its first Strength value. If this Strength is greater than the target’s Toughness, add a +1 modifier to its kill roll (before Cover Modifier). If a 1+ attack gains a +1 modifier, it becomes ++.
+
+When hitting infantry at any range, it uses its second Strength value and gains a level of Ignore Cover based on its first Strength value:
+Strength 1-6 Ignore Cover (1)
+Strength 7+ Ignore Cover (2)</description>
     </rule>
     <rule name="Brigade" id="Brigade" hidden="false">
-      <description>This unit (the brigadier) may brigade move in the Maneuver Phase by spending a 
-command token. When executing a brigade move, the brigadier may move as normal. Up to X additional friendly units may also move in that same turn, so long as they remain within Y” Radius of the brigadier at the start and end of their movement. Neither they nor the brigadier are eligible to move again in the same Maneuver Phase. An infantry unit participating in a brigade move may either embark or disembark from a vehicle, but it may not do both. That is, an infantry unit cannot enter a vehicle, have that vehicle move, and then exit the vehicle (all as part of one brigade move)</description>
+      <description>This unit (the brigadier) may brigade move in the Maneuver Phase by spending a command token.
+
+When executing a brigade move, the brigadier may move as normal. Up to X additional friendly units may also move that same turn, so long as they remain within Y” Radius of the brigadier at the start and end of movement. Neither they nor the brigadier are eligible to move again in the same Maneuver Phase.
+
+An infantry unit participating in a brigade move may either embark or disembark from a vehicle, but it may not do both. That is, an infantry unit cannot enter a vehicle, have that vehicle move, and then exit the vehicle (all as part of one brigade move).</description>
     </rule>
     <rule name="Sense" id="Sense" hidden="false">
-      <description>This unit immediately spots enemies within X” of itself, even without LOS. Sense may be used to spot for Light Indirect fire.</description>
+      <description>This unit spots all enemy units within X&quot;, even without LOS. Embarked units cannot spot with or be spotted by Sense. Unlike Radius effects, Sense measures edge-to-edge.</description>
     </rule>
     <rule name="Assault Specialist" id="Assault Specialist" hidden="false">
-      <description>This infantry unit is specially trained for close-quarters battle. Close combat with 
-this infantry unit is not simultaneous in all rounds. It resolves its firing first in each round, 
-then the enemy retaliates. Opposing Assault Specialists resolve close combat simultaneously, as normal.</description>
+      <description>This infantry unit is specially trained for close-quarters battle. If this unit charges into close combat, combat with it is not simultaneous in all rounds. It resolves its firing first in each round, then the enemy retaliates.
+
+Opposing Assault Specialists resolve combat simultaneously. Embarked and desanting units do not benefit from Assault Specialist.</description>
     </rule>
     <rule name="NBC" id="NBC" hidden="false">
       <description>(Nuclear, Biological, Chemical Protection)
-This unit does not suffer kill rolls from Chemical Weapons or Nuclear thermal radiation.</description>
+This unit does not suffer kill rolls from Chemical Weapons or Scorched terrain.</description>
     </rule>
     <rule name="Amphibious" id="Amphibious" hidden="false">
-      <description>This unit may move through deep water without any movement penalty.</description>
+      <description>This unit may move through deep water without any movement penalty. It must pay 1&quot; to cross into Deep Water.</description>
     </rule>
-    <rule name="Elite" id="Elite" hidden="false">
+    <rule name="Fearless" id="Fearless" hidden="false">
       <description>This infantry unit has nerves of steel! It does not lose movement from pin tokens.</description>
     </rule>
     <rule name="Tow" id="Tow" hidden="false">
-      <description>This unit may tow any friendly vehicle with a (highest arc) toughness of X or less. To hitch another vehicle, a tower must be in basal contact on its rear arc with the front or rear arc of a towable vehicle. The other vehicle may be hitched, even if it has already fired at stationary Accuracy. Hitching must occur at the end of a tower’s turn. As long as the tower and towed unit are hitched, they activate and move as one unit, using the towing unit’s Movement statistic. Towed units cannot move in the same phase that they are hitched or the tower moves. Towing units can fire all weapons at normal accuracy. Towed units cannot fire. A towed unit may tow another unit, creating a chain of tows. The leading unit adds together the (highest arc) Toughness of all tows in a chain to see if it can tow them. When deploying a unit that is towing another unit, deploy the towing unit first with its rear arc touching the edge of the map as normal. Then move the towing unit forward before attaching the towed unit to its rear. 
-If there is not enough space to fit the towed unit on the board, the towed unit must 
-deploy on a separate turn. Do this for all successive tows until space runs out. 
-A unit towing another unit must pay 1” per unit being towed for every full 45 degrees it 
-rotates during the Maneuver Phase. Its first 45 degrees of movement are free.
-The towing unit may choose to unhitch towed units at the end of its movement. The 
-towed unit automatically becomes unhitched from the tower when it moves on its own turn. 
-Aircraft may hitch and unhitch tows while airborne, and cannot land while hitching. Units being towed by Aircraft cannot form tow chains. Units being towed by an airborne unit are considered aircraft for targeting purposes.</description>
+      <description>This unit may tow any friendly vehicle with a (highest arc) toughness of X or less.
+
+To hitch another vehicle, a tower must be in basal contact on its rear arc with the front or rear arc of a towable vehicle. The other vehicle may be hitched, even if it has already fired at stationary Accuracy. Hitching must occur at the end of a tower’s turn.
+
+As long as the tower and towed unit are hitched, they activate and move as one unit, using the towing unit’s Movement statistic. Towed units cannot move in the same phase that they are hitched or the tower moves.
+
+Towing units can fire all weapons. Towed units may only fire Small Arms.
+
+A towed unit may tow another unit, creating a chain of tows. The leading unit adds together the (highest arc) Toughness of all tows in a chain to see if it can tow them.
+
+When deploying a unit that is towing another unit, deploy the towing unit first with its rear arc touching the edge of the map as normal. Then move the towing unit forward before placing the towed unit at its rear. If there is not enough space to fit the towed unit, the towed unit must deploy on a separate turn. Do this for all successive chain tows.
+
+A unit towing another unit must pay 1” per unit being towed for every full 45 degrees it rotates during the Maneuver Phase. Its first 45 degrees of movement are free.
+
+The towing unit may choose to unhitch towed units at the end of its movement. The towed unit automatically becomes unhitched from the tower when it moves on its own turn.
+
+Aircraft may hitch and unhitch tows while airborne, but cannot land while towing. Units being towed by Aircraft cannot form tow chains. Units being towed by an airborne unit are considered aircraft for targeting purposes.</description>
     </rule>
     <rule name="Designator" id="Designator" hidden="false">
-      <description>This weapon causes its target to become immediately spotted. Place a designator token on the target. Designator spotting is lost as soon as the designator moves or attacks with another weapon, if their LOS is broken, or if there is Smoke between shooter and target.
-Support missions can target designated units which aren’t in LOS of the calling TACOM.
-Designators fired at the same time as other weapons immediately spot for them</description>
+      <description>This weapon causes its target to become immediately spotted. Place a designator token on the target. Designator spotting is lost as soon as the designator moves or attacks with another weapon, if their LOS is broken, or if there is Smoke between designator and target.
+
+Cannot be fired at max pin. Active designation immediately breaks at max pin.</description>
     </rule>
     <rule name="Watercraft" id="Watercraft" hidden="false">
-      <description>This vehicle is designed to move on water. It can only move on water (shallow or deep), doing so at no movement penalty. Deep water offers a 2x movement modifier. Watercraft can’t be towed by land units, only by other Watercraft or by aircraft.</description>
+      <description>This vehicle is designed to move on water. It can only move on water (shallow or deep), doing so at no movement penalty. Deep water offers a 2x movement modifier.
+
+Watercraft can’t be towed by land units, only by other Watercraft or by aircraft.</description>
     </rule>
     <rule name="Chaff-Flares" id="Chaff-Flares" hidden="false">
-      <description>This unit is fitted with IR flares and anti-missile chaff. Once per game, Chaff-Flares forces all dice from a single attack which hit the aircraft to re-roll. Chaff-Flares cannot be reloaded and have no effect on fire actions after the one they triggered against. If triggered during a dogfight, they only last for one close combat round. They are unusable when landed.</description>
+      <description>This unit is fitted with IR flares and anti-missile chaff. Chaff-Flares can be activated to force all dice which hit the aircraft during a single fire action to re-roll. Chaff-Flares cannot be reloaded, but may activate X times before they run out of ammo. They have no effect on fire actions after the one they triggered against.
+
+May only trigger once per attack. If triggered during close combat, only lasts for one close combat round. Unusable landed.</description>
     </rule>
     <rule name="Loiter" id="Loiter" hidden="false">
-      <description>This plane may remain strafing over its target without overshooting it, but it must still exit the board at the end of the Fire Phase.</description>
+      <description>This plane may choose to stop moving forward anywhere along its strafing line. At the end of the Fire Phase, it may choose to stay on-map and hold its target between rounds.</description>
     </rule>
-    <rule name="Nimble" id="Nimble" hidden="false">
-      <description>This plane may return to your hand instead of moving during your turn and fall back from dogfights. When it does either, it gains six pin tokens. All non-Homing time-in flight attacks fired at or by this plane then miss.</description>
+    <rule name="Afterburner" id="Afterburner" hidden="false">
+      <description>If this plane waves off and is not at max pin, it may both rotate and make a full move in the same action in exchange for one pin.</description>
     </rule>
     <rule name="Paradrop" id="Paradrop" hidden="false">
-      <description>Units with the Paradrop special rule may deploy by parachuting onto the table in alternating turns after all other blinds deploy. Parachuting blinds can deploy anywhere on the board so long as the unit is not spotted by an enemy or within 8” of an enemy unit, enemy deployment zone or board edge, or objective. They do not get a deployment move. Parachuting vehicles cannot deploy with units towed, embarked, or desanting. 
-Parachuting units gain two pin tokens per each enemy unit with an Air or All-targeting weapon (that can kill it) within half range. These aren&apos;t lost in the first Support Phase.</description>
+      <description>Units with the Paradrop special rule may deploy by parachuting onto the table in alternating turns after all other blinds deploy.
+
+Parachuters can deploy anywhere on the board so long as the unit is not spotted by an enemy or within 8” of an enemy unit, enemy deployment zone or board edge, or objective.
+
+Parachuting units do not get a deployment move. Vehicles cannot deploy with units towed, embarked, or desanting.
+
+At end of deployment, a parachuting unit gains two pin per enemy with Air or All-targeting weapons that can kill it in half range. These aren’t lost in the first Support Phase.</description>
     </rule>
     <rule name="Air-Filling" id="Air-Filling" hidden="false">
-      <description>This weapon blankets the air in shrapnel. Misses apply three pin tokens rather than one, unless the weapon cannot possibly kill its target. (For weapons with variable Strength, roll Strength even if the attack missed.)</description>
+      <description>This weapon’s misses apply two pin rather than one unless the weapon cannot possibly kill its target. (For weapons with variable Strength, roll Strength even on a miss.)</description>
     </rule>
     <rule name="Barrage" id="Barrage" hidden="false">
       <description>This weapon may simultaneously fire up to X times in one fire action. Each attack consumes one Ammo and may use a different shot type. Declare the number of attacks before resolving. Targets can be spaced 2” from each other unless the weapon is Barrage (X, Point).
-Barrage attacks called in fire missions can be spaced 2” away from the mission target.</description>
+
+The first Barrage attack called in a fire mission must be directly on target. The rest can be spaced 2” from each other as normal.</description>
     </rule>
     <rule name="Discreet" id="Discreet" hidden="false">
       <description>This weapon does not identify the firer or cause the firer to lose concealment when fired. You don’t have to indicate who fired it.</description>
     </rule>
     <rule name="Chemical Weapon" id="Chemical Weapon" hidden="false">
-      <description>All Chemical Weapons have a Radius of X inches and are Lingering. Within this radius, all ground units cannot lose pin tokens by any means, cannot call or participate in a brigade move, and cannot call or participate in support missions. Airborne units are totally unaffected.
-The Lingering kill roll is 6+. It applies no pin, ignores cover, and is ignored by NBC units.</description>
+      <description>All Chemical Weapons have a Radius of X inches and are Lingering. Ground units within cannot lose more than one pin at once by any means (including Rally), call or participate in a brigade move, or call or participate in support missions (but they may still be targeted by one). Airborne units are unaffected.
+
+Chemical Weapons inflict a single 6+ kill roll only during Upkeep. Unlike other types of Lingering weapon, a unit in multiple Chemical Weapon radii only rolls one kill. This kill applies no pin, ignores cover, and is ignored by NBC.</description>
     </rule>
     <rule name="Defensive CC" id="Defensive CC" hidden="false">
       <alias>Defensive CC (Inf.)</alias>
-      <description>This weapon may not be used in close combat at all, or versus infantry (respectively) if its unit charged.</description>
+      <description>Cannot fire in close combat at all, or versus infantry (respectively) if its unit charged</description>
     </rule>
     <rule name="Door Gun" id="Door Gun" hidden="false">
       <description>This helicopter weapon may only fire in the listed arcs, and may fire while landed.</description>
     </rule>
     <rule name="Guided Missile" id="Guided Missile" hidden="false">
       <description>This weapon is a guided missile. It does not get a half range Accuracy modifier. Air-targeting Guided Missiles count as having Tracking.
-A Guided Missile has a time-in-flight equal to X. If the weapon is fired within half range, its time-in-flight is reduced by 1. If time-in-flight is reduced to 0, that attack is resolved immediately. Guided Missiles use their accuracy at the time their attack lands, not when it was fired. If the firer is killed, the attack misses.</description>
+
+A Guided Missile has a time-to-target equal to X. If the weapon is fired within half range, its time-to-target is reduced by 1. If time-to-target is reduced to 0, that attack is resolved immediately. Guided Missiles use their accuracy at the time their attack lands, not when it was fired. If the firer is killed, the attack misses.</description>
     </rule>
     <rule name="Homing" id="Homing" hidden="false">
-      <description>This missile has a fire and forget seeker. It ignores any to-hit modifiers applied during flight and always rolls to hit, even if its firer was killed or spotting was lost.</description>
+      <description>This missile has a fire-and-forget seeker. An declared attack’s accuracy cannot be modified by anything but Evasion, even if its firer is dead or spotting/LOS to target is lost.</description>
     </rule>
     <rule name="Ignore Cover" id="Ignore Cover" hidden="false">
       <description>This weapon ignores up to X points of the target’s Cover Modifier.</description>
     </rule>
     <rule name="Lingering" id="Lingering" hidden="false">
-      <description>This Radius weapon’s effects persist on the table after it has landed. Units inside of a Lingering weapon are hit according to the weapon’s Accuracy statistic when it lands, then hit again automatically if they are inside of the weapon’s Radius during subsequent Upkeeps. Multiple Lingering kill rolls do not stack.  
-After all Lingering weapons have rolled to kill during Upkeep (if they have Strength values), roll once per radius to see if it dissipates. On a roll of 4+, the weapon cloud persists until the next Support Phase.</description>
+      <description>This Radius weapon’s effects persist on the table after it has landed. Units inside of a Lingering weapon are hit according to the weapon’s Accuracy statistic when it lands, then hit again automatically if they are in the weapon’s Radius during subsequent Upkeeps. Lingering creates a number of separate radii equal to its Dice statistic at the point where it lands. Units suffer as many kill rolls as radii which the unit is inside of. These kill rolls do not apply pin.
+
+After all Lingering weapons have rolled to kill during Upkeep (if they have Strength values), roll once per radius to see if it dissipates. On a roll of 4+, the weapon cloud persists until the next Support Phase. All discrete radii roll to persist separately.</description>
     </rule>
     <rule name="MCLOS" id="MCLOS" hidden="false">
       <description>(Manual Command, Line of Sight)
 This guided missile demands concentration to steer. For each pin token on the firer (not each two), this weapon suffers -1 to hit.</description>
     </rule>
     <rule name="Multi-Gun" id="Multi-Gun" hidden="false">
-      <description>This weapon may be used simultaneously with another weapon in the Fire Phase. They may be used against different targets.</description>
+      <description>This weapon may be used simultaneously with other weapons in the Fire Phase. May be used against different targets.</description>
     </rule>
     <rule name="No CC" id="No CC" hidden="false">
       <alias>No CC (Inf.)</alias>
       <description>This weapon may not be used in close combat at all or versus infantry (respectively).</description>
     </rule>
     <rule name="Radar Anti-Air" id="Radar Anti-Air" hidden="false">
-      <description>This weapon’s fire is guided by a mounted air search radar. It blind-fires at aircraft at 4+ (or base accuracy, if it&apos;s lower) rather than 6+, even if there is intervening Smoke.</description>
+      <description>This weapon’s fire is guided by a mounted air search radar. It blind-fires at airborne units at 4+ (or base accuracy, if it&apos;s lower) rather than 6+, even if there is intervening Smoke.</description>
     </rule>
     <rule name="Rear Attack" id="Rear Attack" hidden="false">
       <description>This weapon strikes either the top or rear of a target (i.e., its thinnest armor). Attacks automatically hit the target’s rear arc, regardless of the shooter and target&apos;s positions.</description>
@@ -243,36 +277,45 @@ This guided missile demands concentration to steer. For each pin token on the fi
 If only one Ammo is spent, the weapon’s targeting type is Inf/Vec (not Gnd) and it does not get Radius.</description>
     </rule>
     <rule name="Scoped" id="Scoped" hidden="false">
-      <description>This weapon is equipped with a magnified scope: even if a target is too far away to spot and identify, it&apos;s easier to shoot at. It blindfires at 4+ (or base accuracy, if it&apos;s lower) unless there is Smoke between shooter and target.
+      <description>This weapon is equipped with a magnified scope. It blind-fires at ground units at 4+ (or base accuracy, if its worse) unless firing through Smoke.
+
 Additionally, this weapon gains Ignore Cover (1) when targeting infantry.</description>
     </rule>
     <rule name="Smoke" id="Smoke" hidden="false">
       <description>All Smoke weapons have a Radius of X inches and are Lingering. LOS may be drawn through Smoke, but not spotting. Fire through Smoke is thus always blind-fire, unless the unit is otherwise spotted, such as by Thermal Sights. A unit which has the center of its base within a Smoke radius is considered to be firing and fired at through Smoke. Smoke blocks Designators.
-Firing through smoke at an otherwise spotted unit incurs a -1 Accuracy modifier. A result of 6 will always hit anyways, unless the roll is also modified by pin tokens.
+
+Firing through Smoke at an otherwise spotted unit incurs a -1 Accuracy modifier. A result of 6 will always hit anyways, unless the roll is also modified by pin tokens.
+
 Smoke fired at the same time as other weapons does not block spotting until after the fire action has concluded.
-As airborne units fly above the Smoke, they can spot units on the other side of Smoke radius. Ground units directly inside of a Smoke radius, however, benefit from Smoke’s obscuring effects as normal.
-Smoke weapons can be fired even if the firer is at max pin. A Smoke weapon with a Strength value only hits units when it lands, not during Upkeep.</description>
+
+As airborne units fly above the Smoke, they can spot units on the other side of Smoke radius. Ground units directly inside of the radius, however, benefit from Smoke.
+
+Unlike other types of Lingering weapon, a Smoke weapon with a Strength value only hits units when it lands, not during Upkeep.</description>
     </rule>
     <rule name="Tracking" id="Tracking" hidden="false">
       <alias>Tracking (Flak)</alias>
       <description>This weapon has a sophisticated high angle mount. It may target planes at full range, and helicopters within 12”, without blind-firing.
+
 If designated Tracking (Flak), it must blind-fire at helicopters within 12’’, and cannot target planes within 12’’, but may fire at both normally beyond that distance.</description>
     </rule>
     <rule name="Strafing" id="Strafing" hidden="false">
-      <description>If this weapon is fired at moving Accuracy, the helicopter that fired it must immediately move itself forward 12” without rotating.</description>
+      <description>If this weapon is fired at moving Accuracy, the helicopter must immediately move itself forward 12” without rotating after the attack is resolved. A strafing attack cannot be declared if the movement would result in a charge.</description>
     </rule>
     <rule name="Thermal Sights" id="Thermal Sights" hidden="false">
-      <description>This weapon’s optics enable it to spot and fire on units through Smoke for the duration of its own attack, but the attack still suffers the normal -1 Accuracy penalty accrued from firing through Smoke at a spotted unit.
-Thermal Sights does not allow spotting on a unit in Smoke for any reason other than a fire action by a unit using this weapon, i.e. it may not spot through Smoke for the fire mission of a friendly Indirect weapon.</description>
+      <description>This weapon can ignore Smoke on its own fire actions. If the target of this weapon would have been spotted by the firer if not for Smoke, the weapon is not forced to blind-fire. It still accrues the -1 Accuracy penalty from firing through Smoke at a spotted unit.
+
+Thermal Sights do not allow an on-map unit to proactively spot through Smoke for the benefit of friendly on-map units on their fire actions (e.g. for a friendly Indirect fire mission). Thermal Sights only negate Smoke for this weapon’s own attack on its unit’s own turn.
+
+Planes don’t spot for themselves, so those with Thermal Sights ignore Smoke breaking spotting between on-map spotters and their mission targets.</description>
     </rule>
     <rule name="Underbarrel" id="Underbarrel" hidden="false">
       <description>This weapon is mounted under the barrel of X parent weapon. It may be fired simultaneously with that weapon at the same target. The Underbarrel weapon uses that weapon’s Accuracy and half range modifier. It benefits from Thermal Sights, Small Arm, and Scoped if those are possessed by the main weapon.</description>
     </rule>
     <rule name="APS" id="APS" hidden="false">
-      <description>This unit is fitted with an active protection system: essentially a big shotgun that automatically fires to destroy incoming high-caliber munitions. Once per game, APS nullifies a successful kill roll against this vehicle, even if it has ++ Strength. Nullified kills only accrue one pin, not three. APS cannot be reloaded after it nullifies a kill roll. After APS is spent, failed kills accrue three pin as normal.</description>
+      <description>This unit is fitted with a hard-kill protection system that fires bursting munitions to defeat incoming shells and missiles. When this unit suffers a kill, APS can be activated to change the natural target number of a to-kill roll into X+ and remove all positive and negative modifiers from the roll result. APS cannot be reloaded, but may activate Y times before it runs out of ammo. Unusable in close combat.</description>
     </rule>
     <rule name="Nuclear" id="Nuclear" hidden="false">
-      <description>The final argument See APPENDIX H</description>
+      <description>The final argument See APPENDIX I.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
