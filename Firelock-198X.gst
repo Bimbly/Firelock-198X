@@ -90,6 +90,7 @@
         <characteristicType name="M" id="e85a-c562-a781-84ab"/>
         <characteristicType name="Q" id="0103-c752-ce78-b142"/>
         <characteristicType name="T" id="7ba2-0bd2-bda2-c5fa"/>
+        <characteristicType name="E" id="f73d-4838-ecbb-24cd"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="c154-5eac-f92c-3283" name="Atom Barons of Santagria" gameSystemId="sys-29a2-cb33-e21d-80a5" gameSystemRevision="4" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="c154-5eac-f92c-3283" name="Atom Barons of Santagria" gameSystemId="sys-29a2-cb33-e21d-80a5" gameSystemRevision="4" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Leviathan" id="Leviathan" hidden="false">
       <description>*Whether rolling or flying, this monstrosity takes incredible punishment to kill—a testament to Santagrine arrogance.*
@@ -276,7 +276,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
           </modifiers>
         </infoLink>
         <infoLink name="NBC" id="5f4e-2e0b-ab26-d507" hidden="false" type="rule" targetId="NBC"/>
-        <infoLink name="Elite" id="c95d-64ad-556c-a15f" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="c95d-64ad-556c-a15f" hidden="false" type="rule" targetId="Fearless"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Yeoman Paras" hidden="false" id="a2e8-441f-6ecd-8c68">
@@ -322,7 +322,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
       <infoLinks>
         <infoLink name="Assault Specialist" id="b147-154c-2e67-bbad" hidden="false" type="rule" targetId="Assault Specialist"/>
         <infoLink name="Paradrop" id="7412-51cd-6bac-a0b7" hidden="false" type="rule" targetId="Paradrop"/>
-        <infoLink name="Elite" id="29cc-de79-971e-3665" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="29cc-de79-971e-3665" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="NBC" id="fe41-4e23-c05f-8eda" hidden="false" type="rule" targetId="NBC"/>
         <infoLink name="Tercio" id="54e5-92bc-8f7a-ea97" hidden="false" type="rule" targetId="Tercio"/>
       </infoLinks>
@@ -571,7 +571,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
             <modifier type="append" value="(6&quot;)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Elite" id="0fd5-1b1b-2dd8-20ec" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="0fd5-1b1b-2dd8-20ec" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="NBC" id="8ef0-b19d-07c1-7bbd" hidden="false" type="rule" targetId="NBC"/>
         <infoLink name="Paradrop" id="7aa9-d835-fd8d-dad0" hidden="false" type="rule" targetId="Paradrop"/>
         <infoLink name="Tercio" id="11fe-d2c8-e52a-9e6a" hidden="false" type="rule" targetId="Tercio"/>
@@ -624,7 +624,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
       </profiles>
       <infoLinks>
         <infoLink name="NBC" id="29dc-c877-56d4-b15a" hidden="false" type="rule" targetId="NBC"/>
-        <infoLink name="Elite" id="08cd-e560-1a36-84f5" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="08cd-e560-1a36-84f5" hidden="false" type="rule" targetId="Fearless"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Black Fangs" hidden="false" id="4dda-41af-221d-d7d4">
@@ -636,7 +636,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
         <categoryLink targetId="5c40-9df6-09ae-8bc4" id="8a0f-28e0-85d9-5bd6" primary="false" name="Santagrine"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Elite" id="039c-a7fc-310a-0c00" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="039c-a7fc-310a-0c00" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="NBC" id="910c-9a49-15d6-4a59" hidden="false" type="rule" targetId="NBC"/>
         <infoLink name="Assault Specialist" id="75d1-04d1-2809-7a0c" hidden="false" type="rule" targetId="Assault Specialist"/>
         <infoLink name="Lerna 15-lber Rocket Pod" id="5c27-c468-e3d8-6ca7" hidden="false" type="profile" targetId="Lerna 15-lber Rocket Pod">
@@ -1370,8 +1370,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
             <characteristic name="Acc" typeId="d665-cce3-dfb4-664b">3+/4+</characteristic>
             <characteristic name="Str" typeId="3c88-8ccc-7c7c-d717">8/8</characteristic>
             <characteristic name="Dice" typeId="3dff-e6a1-8ebe-a4ec">1</characteristic>
-            <characteristic name="Keywords" typeId="6179-e464-2408-8ef1">Ammo 3, Ignore Cover (1), No CC (Inf.)
-</characteristic>
+            <characteristic name="Keywords" typeId="6179-e464-2408-8ef1">Ammo 3, Ignore Cover (1), No CC (Inf.)</characteristic>
           </characteristics>
         </profile>
         <profile name="➤ S-10 250-lber Siege Gun - Phosgene Gas" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="b548-b668-4abb-f235">
@@ -1781,6 +1780,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
             <characteristic name="M" typeId="e85a-c562-a781-84ab">16&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">3</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">2</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Sb.38 20mm Autocannons, Dual" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="a81e-7f13-1615-9886">
@@ -1805,7 +1805,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Nimble" id="93d2-3129-7a61-623a" hidden="false" type="rule" targetId="Nimble"/>
+        <infoLink name="Afterburner" id="93d2-3129-7a61-623a" hidden="false" type="rule" targetId="Afterburner"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="MC.20-01C &quot;Rocinante&quot;" hidden="false" id="37d2-8bee-63bd-fa5e">
@@ -1817,7 +1817,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
         <categoryLink targetId="5c40-9df6-09ae-8bc4" id="02b2-c399-2fbe-c735" primary="false" name="Santagrine"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Nimble" id="59c7-fa01-f1ad-953a" hidden="false" type="rule" targetId="Nimble"/>
+        <infoLink name="Afterburner" id="59c7-fa01-f1ad-953a" hidden="false" type="rule" targetId="Afterburner"/>
         <infoLink name="Chaff-Flares" id="9192-1b22-bf16-90ec" hidden="false" type="rule" targetId="Chaff-Flares"/>
         <infoLink name="Flower of the Atom" id="37a9-e62e-d16f-7cde" hidden="false" type="rule" targetId="Flower of the Atom"/>
       </infoLinks>
@@ -1828,6 +1828,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
             <characteristic name="M" typeId="e85a-c562-a781-84ab">18&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">3</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">3</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">3</characteristic>
           </characteristics>
         </profile>
         <profile name="Allant 1.8-lber Rotary Cannon" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="602f-0a8a-136d-a1fe">
@@ -1877,6 +1878,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
             <characteristic name="M" typeId="e85a-c562-a781-84ab">14&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">3</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">4</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Rb.12 9-lber Air-to-Air Rockets" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="5b3f-869a-5c82-bbd1">
@@ -1911,7 +1913,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Nimble" id="d0fe-44ea-c955-ff99" hidden="false" type="rule" targetId="Nimble"/>
+        <infoLink name="Afterburner" id="d0fe-44ea-c955-ff99" hidden="false" type="rule" targetId="Afterburner"/>
         <infoLink name="Flower of the Atom" id="8e93-6db3-96af-5f0f" hidden="false" type="rule" targetId="Flower of the Atom"/>
       </infoLinks>
     </selectionEntry>
@@ -1926,7 +1928,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
       <infoLinks>
         <infoLink name="Chaff-Flares" id="4187-0b98-2e11-b977" hidden="false" type="rule" targetId="Chaff-Flares"/>
         <infoLink name="Flower of the Atom" id="3323-4913-f2d4-b7b2" hidden="false" type="rule" targetId="Flower of the Atom"/>
-        <infoLink name="Nimble" id="a1cb-be0d-6c4e-690f" hidden="false" type="rule" targetId="Nimble"/>
+        <infoLink name="Afterburner" id="a1cb-be0d-6c4e-690f" hidden="false" type="rule" targetId="Afterburner"/>
       </infoLinks>
       <profiles>
         <profile name="Air Superiority Fighter" typeId="bc88-9949-5b2a-9493" typeName="Unit (Aircraft)" hidden="false" id="f669-e648-763f-1204">
@@ -1935,6 +1937,7 @@ If a plane with Flower of the Atom is the target of an interception, it may not 
             <characteristic name="M" typeId="e85a-c562-a781-84ab">20&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">4</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">3</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Allant 1.8-lber Rotary Cannon, modified " typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="84ec-0303-a2f6-6448">

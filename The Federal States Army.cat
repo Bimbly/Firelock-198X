@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6e9d-0d8f-14de-85f5" name="The Federal States Army" gameSystemId="sys-29a2-cb33-e21d-80a5" gameSystemRevision="1" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6e9d-0d8f-14de-85f5" name="The Federal States Army" gameSystemId="sys-29a2-cb33-e21d-80a5" gameSystemRevision="1" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="unit" import="true" name="Type 68C &quot;Appomattox&quot;" hidden="false" id="d69d-ed9f-3b55-406c">
       <profiles>
@@ -77,7 +77,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Elite" id="e48b-dd8c-08f9-1310" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="e48b-dd8c-08f9-1310" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="Paradrop" id="dea4-6c31-4b95-47d1" hidden="false" type="rule" targetId="Paradrop"/>
         <infoLink name="Brigade" id="9e50-38c1-6408-515a" hidden="false" type="rule" targetId="Brigade"/>
         <infoLink name="Assault Dismount" id="9c04-fb8a-a39c-6fdf" hidden="false" type="rule" targetId="Assault Dismount"/>
@@ -186,7 +186,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Elite" id="4266-4c01-4af0-42b2" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="4266-4c01-4af0-42b2" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="Paradrop" id="4de8-d8e6-326e-6ec6" hidden="false" type="rule" targetId="Paradrop"/>
         <infoLink name="Assault Dismount" id="29ae-cf98-1405-c9c2" hidden="false" type="rule" targetId="Assault Dismount"/>
         <infoLink name="6G1 7.76mm Battle Rifle" id="0a2c-820d-1515-4e38" hidden="false" type="profile" targetId="6G1 7.76mm Battle Rifle">
@@ -405,7 +405,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Elite" id="c628-782d-7f82-5c9c" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="c628-782d-7f82-5c9c" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="Paradrop" id="05d5-17a5-c4ee-2c9e" hidden="false" type="rule" targetId="Paradrop"/>
         <infoLink name="Assault Dismount" id="a52a-3631-c461-cc23" hidden="false" type="rule" targetId="Assault Dismount"/>
         <infoLink name="6G1 7.76mm Battle Rifle" id="512c-340b-b174-a559" hidden="false" type="profile" targetId="6G1 7.76mm Battle Rifle">
@@ -510,7 +510,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Elite" id="8671-16c7-999a-ed70" hidden="false" type="rule" targetId="Elite"/>
+        <infoLink name="Fearless" id="8671-16c7-999a-ed70" hidden="false" type="rule" targetId="Fearless"/>
         <infoLink name="Assault Dismount" id="84b1-33ff-2387-0469" hidden="false" type="rule" targetId="Assault Dismount"/>
         <infoLink name="6P3 11.5mm SMG" id="3c95-c38e-9af6-c472" hidden="false" type="profile" targetId="6P3 11.5mm SMG">
           <modifiers>
@@ -1561,6 +1561,7 @@
             <characteristic name="M" typeId="e85a-c562-a781-84ab">12&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">2</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">3</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">0</characteristic>
           </characteristics>
         </profile>
         <profile name="6G2 7.76mm MGs, octet" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="5042-dec7-89ab-03c0">
@@ -1594,12 +1595,13 @@
         <categoryLink targetId="4367-2398-f892-59ac" id="93fa-3673-ca78-4516" primary="false" name="Federal"/>
       </categoryLinks>
       <profiles>
-        <profile name="Multi-Role Fighter" typeId="bc88-9949-5b2a-9493" typeName="Unit (Aircraft)" hidden="false" id="6657-0287-7bf2-bbb6">
+        <profile name="Strike Aircraft" typeId="bc88-9949-5b2a-9493" typeName="Unit (Aircraft)" hidden="false" id="6657-0287-7bf2-bbb6">
           <characteristics>
             <characteristic name="Type" typeId="9265-2ade-09bd-09d9">CAP</characteristic>
             <characteristic name="M" typeId="e85a-c562-a781-84ab">12&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">2</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">4</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">0</characteristic>
           </characteristics>
         </profile>
         <profile name="4BE1 500kg HE Bomb" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="3173-48c8-dd2a-d29f">
@@ -1644,6 +1646,7 @@
             <characteristic name="M" typeId="e85a-c562-a781-84ab">12&quot;</characteristic>
             <characteristic name="Q" typeId="0103-c752-ce78-b142">2</characteristic>
             <characteristic name="T" typeId="7ba2-0bd2-bda2-c5fa">4</characteristic>
+            <characteristic name="E" typeId="f73d-4838-ecbb-24cd">1</characteristic>
           </characteristics>
         </profile>
         <profile name="4BN2 350kg Napalm Bomb" typeId="623b-0c41-5890-aad3" typeName="Weapon" hidden="false" id="448f-d7e5-c808-ad23">
@@ -1698,7 +1701,7 @@ This special rule also activates when a unit depletes an enemy squad, but not w
 
 
 This turboprop plane is assisted by a powerful rocket motor with a separate fuel supply, allowing it to “sprint” much faster than its normal airspeed for a short duration.
-Once per game, when this unit moves, it may declare a rocket sprint for that turn. During a rocket sprint, it may either double its movement for that turn or exit the board as if it was Nimble. When Sprint Motor has been exhausted, mark the plane with a spent ammo token.</description>
+Once per game, when this unit moves, it may declare a rocket sprint for that turn. During a rocket sprint, it may either double its movement for that turn or exit the board as if it was Afterburner. When Sprint Motor has been exhausted, mark the plane with a spent ammo token.</description>
     </rule>
     <rule name="Chemical-SP" id="Chemical-SP" hidden="false">
       <description>*Gas shells enriched with silver particulate “confetti” are notorious for their hideous effects against unprotected lupar: silver destroys cursed flesh.*
